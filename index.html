@@ -1,36 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Hongze ZHAO</title>
-</head>
+---
+layout: default
+---
 
-<body>
+<div class="home">
 
-<style>
-    .photo{
-        text-align: center;
-        width: 100%;
-    }
-    .title{
-        font-size: 40px;
-        font-family: fantasy;
-        color: darkgreen;
-    }
-    .url{
-        font-size: 28px;
-        font-family: cursive;
-        color: gray;
-    }
-    .domain{
-        color: red;
-    }
-</style>
+  <h1 class="page-heading">Posts</h1>
 
-<div class="photo">
-    <p class="title">Hongze ZHAO</p>
-    <p class="url">http://<span class="domain">grandpa.red</span></p>
-    <img src="images/head_small.jpg" alt="photo"/>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
 </div>
-
-</body>
-</html>
