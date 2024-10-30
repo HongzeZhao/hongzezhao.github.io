@@ -7,7 +7,7 @@ categories: jekyll
 
 ## 安装必须的库
 
-### 安装ruby
+### 安装 ruby
 jekyll使用ruby开发，首先要确保在你的机器上安装了ruby。Mac系统目前自带ruby，但是有些系统的ruby版本有些老，需要升级一下：
 ```shell
 brew update
@@ -22,7 +22,7 @@ source ~/.bash_profile
 ```
 对于使用Zsh的用户，该指令应添加到 ~/.zshrc 文件中。
 
-### 安装jekyll
+### 安装 jekyll
 看[jekyll官网](https://jekyllcn.com/)或者直接看这个
 ```shell
   gem install jekyll bundler
@@ -42,7 +42,7 @@ gem list
 export PATH="/usr/local/lib/ruby/gems/3.3.0/bin:$PATH"
 ```
 
-### 本地安装jekyll的插件
+### 本地安装 jekyll 的插件
 以下命令会安装Gemfile文件中依赖的包，本地安装了依赖的包才能正常编译。
 ```shell
 bundle install
@@ -56,5 +56,10 @@ bundle install
 
 ```shell
 # 本地编译，并在目录发生变化时自动编译
-jekyll server --watch
+jekyll serve --watch
 ```
+
+
+## 部署到 github pages
+使用github actions自动编译部署jekyll很方便，需要在action tab下配置一个pipeline，直接搜jekyll的，都用默认的即可。这样theme也不需要使用remote的也能轻松编译成功。
+详细直接参考[Jekyll Github Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/)
