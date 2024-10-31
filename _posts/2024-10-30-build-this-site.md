@@ -2,7 +2,8 @@
 layout: single
 title:  "如何使用jekyll编译博客"
 date:   2024-10-30 11:37:51 +0800
-categories: jekyll
+categories: web
+tags: jekyll ruby
 ---
 
 ## 安装必须的库

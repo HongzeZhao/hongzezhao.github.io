@@ -2,7 +2,7 @@
 layout: single
 title:  "直播pk算法的思考"
 date:   2024-10-30 23:32:51 +0800
-categories: algorithms graph
+categories: algorithm
 tags: livestream pk 匈牙利算法
 ---
 
